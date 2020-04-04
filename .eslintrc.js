@@ -4,12 +4,14 @@ module.exports = {
     project: 'tsconfig.json',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint/eslint-plugin'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'security', 'no-secrets'],
   extends: [
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier',
-    'prettier/@typescript-eslint',
+    'plugin:security/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
   ],
   root: true,
   env: {
@@ -17,8 +19,24 @@ module.exports = {
     jest: true,
   },
   rules: {
+    'no-secrets/no-secrets': 'error',
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
   },
+  overrides: [
+    {
+      files: ['*.spec.ts', '*.test.ts', '*.e2e-spec.ts'],
+      extends: ['plugin:jest/recommended'],
+    },
+    {
+      files: ['*.js'],
+      extends: [
+        'eslint:recommended',
+        'plugin:security/recommended',
+        'plugin:import/errors',
+        'plugin:import/warnings',
+      ],
+    },
+  ],
 };
