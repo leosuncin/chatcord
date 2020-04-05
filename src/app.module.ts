@@ -2,7 +2,8 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { ChatModule } from './chat/chat.module';
+
+import { ChatModule } from '~chat/chat.module';
 
 @Module({
   imports: [

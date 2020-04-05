@@ -1,9 +1,10 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model, Types } from 'mongoose';
-import { CreateRoom } from '../dtos/create-room.dto';
-import { UpdateRoom } from '../dtos/update-room.dto';
-import type { Room } from '../schemas/room.schema';
+
+import { CreateRoom } from '~chat/dtos/create-room.dto';
+import { UpdateRoom } from '~chat/dtos/update-room.dto';
+import type { Room } from '~chat/schemas/room.schema';
 
 @Injectable()
 export class RoomService {

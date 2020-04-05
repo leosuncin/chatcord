@@ -9,9 +9,10 @@ import {
   Post,
   Put,
 } from '@nestjs/common';
-import { CreateRoom } from '../dtos/create-room.dto';
-import { UpdateRoom } from '../dtos/update-room.dto';
-import { RoomService } from '../services/room.service';
+
+import { CreateRoom } from '~chat/dtos/create-room.dto';
+import { UpdateRoom } from '~chat/dtos/update-room.dto';
+import { RoomService } from '~chat/services/room.service';
 
 @Controller('room')
 export class RoomController {

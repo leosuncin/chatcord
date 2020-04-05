@@ -1,8 +1,9 @@
-import { INestApplication, HttpStatus } from '@nestjs/common';
-import { TestingModule, Test } from '@nestjs/testing';
-import { AppModule } from '../src/app.module';
-import * as request from 'supertest';
+import { HttpStatus, INestApplication } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
 import * as faker from 'faker';
+import * as request from 'supertest';
+
+import { AppModule } from '~app/app.module';
 
 describe('RoomController (e2e)', () => {
   let app: INestApplication;

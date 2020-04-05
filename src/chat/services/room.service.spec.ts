@@ -1,10 +1,11 @@
 import { getModelToken } from '@nestjs/mongoose';
 import { Test, TestingModule } from '@nestjs/testing';
-import { RoomService } from './room.service';
 import mockingoose from 'mockingoose';
-import { Room } from '../schemas/room.schema';
 import { model, Types } from 'mongoose';
-import { CreateRoom } from '../dtos/create-room.dto';
+
+import { CreateRoom } from '~chat/dtos/create-room.dto';
+import { Room } from '~chat/schemas/room.schema';
+import { RoomService } from '~chat/services/room.service';
 
 describe('RoomService', () => {
   let service: RoomService;
@@ -105,9 +106,7 @@ describe('RoomService', () => {
       name: "John's party",
       public: true,
     });
-    mockingoose(RoomModel)
-      .toReturn(model, 'findOne')
-      .toReturn(model, 'remove');
+    mockingoose(RoomModel).toReturn(model, 'findOne').toReturn(model, 'remove');
 
     return expect(service.remove(model._id)).resolves.toBeDefined();
   });

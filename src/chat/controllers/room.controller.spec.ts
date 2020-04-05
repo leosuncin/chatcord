@@ -1,7 +1,8 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { CreateRoom } from '../dtos/create-room.dto';
-import { UpdateRoom } from '../dtos/update-room.dto';
-import { RoomController } from './room.controller';
+
+import { RoomController } from '~chat/controllers/room.controller';
+import { CreateRoom } from '~chat/dtos/create-room.dto';
+import { UpdateRoom } from '~chat/dtos/update-room.dto';
 
 describe('Room Controller', () => {
   let controller: RoomController;
