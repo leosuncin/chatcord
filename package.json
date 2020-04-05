@@ -86,7 +86,8 @@
         "rootDir": "src",
         "moduleNameMapper": {
           "^~app/(.*)$": "<rootDir>/$1",
-          "^~chat/(.*)$": "<rootDir>/chat/$1"
+          "^~chat/(.*)$": "<rootDir>/chat/$1",
+          "^~auth/(.*)$": "<rootDir>/auth/$1"
         },
         "testEnvironment": "node",
         "preset": "ts-jest"
@@ -96,7 +97,8 @@
         "rootDir": "test",
         "moduleNameMapper": {
           "^~app/(.*)$": "<rootDir>/../src/$1",
-          "^~chat/(.*)$": "<rootDir>/../src/chat/$1"
+          "^~chat/(.*)$": "<rootDir>/../src/chat/$1",
+          "^~auth/(.*)$": "<rootDir>/../src/auth/$1"
         },
         "testEnvironment": "node",
         "preset": "@shelf/jest-mongodb",

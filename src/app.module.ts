@@ -3,6 +3,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 
+import { AuthModule } from '~auth/auth.module';
 import { ChatModule } from '~chat/chat.module';
 
 @Module({
@@ -16,6 +17,7 @@ import { ChatModule } from '~chat/chat.module';
       rootPath: join(__dirname, '..', 'public'),
     }),
     ChatModule,
+    AuthModule,
   ],
 })
 export class AppModule {}

@@ -12,7 +12,8 @@
     "baseUrl": ".",
     "paths": {
       "~app/*": ["./src/*"],
-      "~chat/*": ["./src/chat/*"]
+      "~chat/*": ["./src/chat/*"],
+      "~auth/*": ["./src/auth/*"]
     }
   },
   "exclude": ["node_modules", "dist"]
