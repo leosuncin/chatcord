@@ -16,3 +16,18 @@ services:
       ME_CONFIG_MONGODB_SERVER: mongodb
     ports:
       - "8081:8081"
+  redis:
+    image: redis:5
+    env_file: .env
+    ports:
+      - "6379:6379"
+  bull_board:
+    image: deadly0/bull-board
+    depends_on:
+      - redis
+    ports:
+      - "8091:3000"
+    environment:
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_USE_TLS: 'false'

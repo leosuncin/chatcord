@@ -1,3 +1,4 @@
+import { BullModule } from '@nestjs/bull';
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ServeStaticModule } from '@nestjs/serve-static';
@@ -15,6 +16,10 @@ import { ChatModule } from '~chat/chat.module';
     }),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
+    }),
+    BullModule.registerQueue({
+      name: 'email',
+      redis: process.env.REDIS_URL,
     }),
     ChatModule,
     AuthModule,

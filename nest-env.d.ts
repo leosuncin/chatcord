@@ -4,5 +4,6 @@ declare namespace NodeJS {
     readonly PORT: string;
     readonly MONGODB_URI: string;
     readonly APP_SECRET: string;
+    readonly REDIS_URL: string;
   }
 }
