@@ -5,12 +5,15 @@
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "~app/*": ["./src/*"],
+      "~chat/*": ["./src/chat/*"]
+    }
   },
   "exclude": ["node_modules", "dist"]
 }
