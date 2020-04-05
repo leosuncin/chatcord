@@ -1,5 +1,5 @@
 import { Document, Schema } from 'mongoose';
-import mongooseUniqueValidator from 'mongoose-unique-validator';
+import * as mongooseUniqueValidator from 'mongoose-unique-validator';
 
 export interface User extends Document {
   email: NonNullable<string>;
