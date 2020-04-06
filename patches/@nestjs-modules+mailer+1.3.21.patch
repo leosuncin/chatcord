@@ -1,0 +1,14 @@
+diff --git a/node_modules/@nestjs-modules/mailer/dist/index.js b/node_modules/@nestjs-modules/mailer/dist/index.js
+index 3bf7553..9d21cfc 100644
+--- a/node_modules/@nestjs-modules/mailer/dist/index.js
++++ b/node_modules/@nestjs-modules/mailer/dist/index.js
+@@ -2,9 +2,5 @@
+ Object.defineProperty(exports, "__esModule", { value: true });
+ var mailer_module_1 = require("./mailer.module");
+ exports.MailerModule = mailer_module_1.MailerModule;
+-var pug_adapter_1 = require("./adapters/pug.adapter");
+-exports.PugAdapter = pug_adapter_1.PugAdapter;
+-var handlebars_adapter_1 = require("./adapters/handlebars.adapter");
+-exports.HandlebarsAdapter = handlebars_adapter_1.HandlebarsAdapter;
+ var mailer_service_1 = require("./mailer.service");
+ exports.MailerService = mailer_service_1.MailerService;
