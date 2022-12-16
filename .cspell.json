@@ -1,0 +1,43 @@
+{
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/**",
+    ".vscode",
+    "megalinter",
+    ".gitignore",
+    "pnpm-lock.yaml",
+    "report",
+    "dist/**",
+    "**/coverage/**"
+  ],
+  "language": "en,es",
+  "noConfigSearch": true,
+  "allowCompoundWords": true,
+  "words": [
+    "envalid",
+    "Ilona",
+    "lcov",
+    "Matheus",
+    "nabla",
+    "pino",
+    "Suncin",
+    "testid",
+    "WITDH"
+  ],
+  "dictionaries": [
+    "en_US",
+    "companies",
+    "softwareTerms",
+    "misc",
+    "lorem-ipsum",
+    "typescript",
+    "node",
+    "bash",
+    "npm"
+  ],
+  "languageSettings": [
+    { "languageId": "commit-msg", "ignoreRegExpList": ["/^#.*/gm"] }
+  ],
+  "version": "0.2"
+}

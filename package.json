@@ -1,0 +1,38 @@
+{
+  "name": "chatcord",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Realtime chat with users & rooms",
+  "keywords": [
+    "express",
+    "react",
+    "socket.io",
+    "tailwind"
+  ],
+  "license": "GPL-3.0",
+  "author": "Jaime Leonardo Suncin Cruz",
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "scripts": {
+    "build": "pnpm run --recursive build",
+    "dev": "pnpm run --recursive --parallel --aggregate-output dev",
+    "lint": "pnpm run --recursive lint",
+    "prepare": "husky install",
+    "start": "pnpm run --recursive --parallel --aggregate-output start",
+    "test": "CI=true pnpm run --recursive test"
+  },
+  "dependencies": {
+    "@commitlint/cli": "17.3.0",
+    "@commitlint/config-conventional": "17.3.0",
+    "@manypkg/cli": "0.19.2",
+    "cspell": "6.17.0",
+    "husky": "8.0.2",
+    "lint-staged": "13.1.0",
+    "prettier": "2.8.1",
+    "sort-package-json": "2.1.0",
+    "syncpack": "8.4.11"
+  },
+  "packageManager": "pnpm@7.18.2"
+}

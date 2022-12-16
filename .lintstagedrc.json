@@ -1,0 +1,6 @@
+{
+  "*.{js,jsx,ts,tsx,csj,mjs}": ["prettier --write"],
+  "*.{css,html,json,md,yml,yaml}": ["prettier --write"],
+  "package.json": ["syncpack format --source", "sort-package-json"],
+  "*": ["cspell lint --no-summary --no-progress --no-must-find-files"]
+}
